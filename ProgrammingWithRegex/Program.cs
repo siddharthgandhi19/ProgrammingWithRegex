@@ -24,6 +24,11 @@ namespace ProgrammingWithRegex
                         string opt1 = Convert.ToString(Console.ReadLine());
                         code1.TestPinCode2(opt1);
                         break;
+                        case 3:
+                        PostalCode code2 = new PostalCode();
+                        string opt2 = Convert.ToString(Console.ReadLine());
+                        code2.TestPinCode3(opt2);
+                        break;
                     default:
                         flag = false;
                         Console.WriteLine("Try Again");
