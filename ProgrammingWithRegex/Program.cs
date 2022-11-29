@@ -10,7 +10,7 @@ namespace ProgrammingWithRegex
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. ");
+                Console.WriteLine(" 1. Check pattern for pincode\n 2. Restrict pincode pattern at begining ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -18,6 +18,11 @@ namespace ProgrammingWithRegex
                         PostalCode code = new PostalCode();
                         string opt = Convert.ToString(Console.ReadLine());
                         code.TestPinCode(opt);
+                        break;
+                    case 2:
+                        PostalCode code1 = new PostalCode();
+                        string opt1 = Convert.ToString(Console.ReadLine());
+                        code1.TestPinCode2(opt1);
                         break;
                     default:
                         flag = false;

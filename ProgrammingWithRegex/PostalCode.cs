@@ -10,9 +10,17 @@ namespace ProgrammingWithRegex
     public class PostalCode
     {
         const string PIN_CODE_PATTERN = "^[0-9]{6}$";
+        const string PIN_CODE_PATTERN2 = "^[0-9]{6}$";
         public void TestPinCode(string input)
         {
             if (Regex.IsMatch(input, PIN_CODE_PATTERN))
+                Console.WriteLine("Pin Code Matches");
+            else
+                Console.WriteLine("Pin Code Regex Failed");
+        }
+        public void TestPinCode2(string input)
+        {
+            if (Regex.IsMatch(input, PIN_CODE_PATTERN2))
                 Console.WriteLine("Pin Code Matches");
             else
                 Console.WriteLine("Pin Code Regex Failed");
