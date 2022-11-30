@@ -10,7 +10,7 @@ namespace ProgrammingWithRegex
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine(" 1. Check pattern for pincode\n 2. Restrict pincode pattern at begining\n 3. Restrict pincode pattern at End\n 4. Pincode With Space Between\n 5. Email validation start with firstname\n 6. Email validation with @\n 7. Email validation end with (.co)\n 8. Email validation end with (.co.in)  ");
+                Console.WriteLine(" 1. Check pattern for pincode\n 2. Restrict pincode pattern at begining\n 3. Restrict pincode pattern at End\n 4. Pincode With Space Between\n 5. Email validation start with firstname\n 6. Email validation with @\n 7. Email validation end with (.co)\n 8. Email validation end with (.co.in)\n 9. Email validation with special characters (_,-,.)");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -60,7 +60,13 @@ namespace ProgrammingWithRegex
                         EmailValidator emailValidator3 = new EmailValidator();
                         Console.WriteLine("Enter Email");
                         string opt7 = Convert.ToString(Console.ReadLine());
-                        emailValidator3.VerifyEmai4(opt7);
+                        emailValidator3.VerifyEmail4(opt7);
+                        break;
+                    case 9:
+                        EmailValidator emailValidator4 = new EmailValidator();
+                        Console.WriteLine("Enter Email");
+                        string opt8 = Convert.ToString(Console.ReadLine());
+                        emailValidator4.VerifyEmail5(opt8);
                         break;
                     default:
                         flag = false;
