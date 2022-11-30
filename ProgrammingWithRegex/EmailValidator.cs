@@ -14,7 +14,8 @@ namespace ProgrammingWithRegex
         const string EMAIL_REGEX3 = "^[a-zA-Z]+[@][a-zA-Z]+[.][a-z]{2,}$";
         const string EMAIL_REGEX4 = "^[a-zA-Z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2}){0,1}$";
         const string EMAIL_REGEX5 = "^[a-zA-Z]+[._-]{0,1}[a-z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2}){0,1}$";
-     
+        const string EMAIL_REGEX6 = "^[a-zA-Z]+[._-]{0,1}[a-z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2}){0,1}$";
+
         public void VerifyEmail(string input)
         {
 
@@ -51,6 +52,14 @@ namespace ProgrammingWithRegex
         {
 
             if (Regex.IsMatch(input, EMAIL_REGEX5))
+                Console.WriteLine("Email Matches");
+            else
+                Console.WriteLine("Email Regex Failed");
+        }
+        public void VerifyEmail6(string input)
+        {
+
+            if (Regex.IsMatch(input, EMAIL_REGEX6))
                 Console.WriteLine("Email Matches");
             else
                 Console.WriteLine("Email Regex Failed");
